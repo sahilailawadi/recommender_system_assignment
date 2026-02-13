@@ -1,0 +1,17 @@
+item_id,item_name,category,price,speed_mbps,notes
+0,Internet 300,internet_tier,60,300.0,
+1,Internet 500,internet_tier,75,500.0,
+2,Internet 1000,internet_tier,95,1000.0,
+3,Internet 2000,internet_tier,120,2000.0,
+4,Mobile By-the-Gig,mobile_plan,25,,
+5,Mobile Unlimited,mobile_plan,45,,
+6,Mobile Unlimited+,mobile_plan,60,,
+7,xFi Complete,addon,25,,
+8,WiFi Extender,addon,10,,
+9,xFi Pro Extender (Storm-Ready),addon,20,,Battery backup for power outage connectivity
+10,Device Protection,addon,15,,
+11,International Calling,addon,10,,
+12,Extra Mobile Line,addon,30,,
+13,Internet+Mobile Bundle,bundle,15,,
+14,Premium Reliability Bundle,bundle,25,,
+15,Switch to Xfinity Mobile (Savings Offer),offer,0,,
