@@ -31,6 +31,7 @@ Visit: https://ailawadia2.streamlit.app/
 Launch an interactive Jupyter notebook environment without any local setup:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sahilailawadi/recommender_system_assignment/HEAD?labpath=Ailawadi-A2.ipynb)
+https://mybinder.org/v2/gh/sahilailawadi/recommender_system_assignment/HEAD?labpath=Ailawadi-A2.ipynb
 
 **Click the badge above** to:
 - Run the notebook in your browser
