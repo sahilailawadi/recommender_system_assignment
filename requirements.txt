@@ -7,3 +7,4 @@ git+https://github.com/lyst/lightfm.git
 jupyter>=1.0
 ipykernel>=6.0
 matplotlib>=3.8
+streamlit>=1.30
