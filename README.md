@@ -31,7 +31,8 @@ Visit: https://ailawadia2.streamlit.app/
 Launch an interactive Jupyter notebook environment without any local setup:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/sahilailawadi/recommender_system_assignment/HEAD?labpath=Ailawadi-A2.ipynb)
-https://mybinder.org/v2/gh/sahilailawadi/recommender_system_assignment/HEAD?labpath=Ailawadi-A2.ipynb
+
+- https://mybinder.org/v2/gh/sahilailawadi/recommender_system_assignment/HEAD?labpath=Ailawadi-A2.ipynb
 
 **Click the badge above** to:
 - Run the notebook in your browser
@@ -106,24 +107,6 @@ pip install -r requirements.txt
 ```bash
 jupyter notebook Ailawadi-A2.ipynb
 ```
-
----
-
-## 🌐 Interactive Web Demo - Streamlit
-
-Try the live web application for interactive recommendations:
-
-### Option 1: Online Demo (Streamlit Cloud)
-
-Visit: https://ailawadia2.streamlit.app/
-
-**Features:**
-- 🆕 **New Customer Mode**: Input demographics and preferences to get personalized recommendations
-- 👤 **Existing Customer Mode**: Look up recommendations by customer ID
-- 📊 **Grouped Results**: Top pick, add-ons, mobile/bundles
-- 💰 **Savings Calculator**: Compare mobile plan costs
-
----
 
 ## 📁 Dataset
 
