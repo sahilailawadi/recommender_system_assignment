@@ -1,6 +1,8 @@
 # Comcast Product Recommender System
 
-A hybrid recommendation system built with LightFM for personalized Comcast product recommendations. This project uses matrix factorization with both user/item features to handle warm-start and cold-start scenarios.
+A hybrid recommendation system built with LightFM for personalized Comcast product recommendations. 
+This project uses matrix factorization with both user/item features to handle warm-start and cold-start scenarios.
+The purpose of this demo is to illustrate how a telecommunications provider can use a hybrid recommender system to improve product personalization, upsell opportunities, and customer retention.
 
 ## 📊 Project Overview
 
@@ -12,9 +14,17 @@ A hybrid recommendation system built with LightFM for personalized Comcast produ
 
 ---
 
+## How To Run ##
+
+- Binder (no setup) : https://mybinder.org/v2/gh/sahilailawadi/recommender_system_assignment/HEAD?labpath=Ailawadi-A2.ipynb
+- Streamlit (Interactive Demo) : https://ailawadia2.streamlit.app/
+- Local Jupyter (Python 3.11 required)
+
+
 ## 🌐 Interactive Web Demo - Streamlit
 
-Try the live web application for interactive recommendations:
+Try the live web application for interactive recommendations.
+Streamlit retrains a small model on launch for demo simplicity.
 
 Visit: https://ailawadia2.streamlit.app/
 
@@ -63,7 +73,8 @@ jupyter nbconvert --to html Ailawadi-A2.ipynb
 
 ### Prerequisites
 
-**Required**: Python 3.11.x (LightFM is not compatible with Python 3.12+)
+**Required**: Python 3.11.x 
+(LightFM install from source fails for higher versions of python)
 
 Check your Python version:
 ```bash
@@ -112,23 +123,44 @@ jupyter notebook Ailawadi-A2.ipynb
 
 The project uses synthetic Comcast customer data:
 
-- **users_v3.csv**: 1000+ customer profiles (age, location, tenure, services)
-- **items_v3.csv**: 15 products (internet, TV, phone, bundles, add-ons)
-- **interactions_v3.csv**: User-item interaction history
+- **users_v3.csv**: 1000+ customer profiles (800 Existing Customers and 200 New Customers)
+- **items_v3.csv**: 16 products (internet tiers, mobile plans, add-ons, bundles/offers)
+- **interactions_v3.csv**: User-item interaction
 
-Data generated using `dataGen.py` to simulate realistic customer behavior patterns.
+Data generated using `dataGen_v3.py` to simulate realistic customer behavior patterns.
 
 ---
 
 ## 🧠 Model Details
 
 - **Algorithm**: LightFM (Hybrid Matrix Factorization)
+    This is a hybrid recommender because it combines collaborative filtering (user–item interaction matrix) 
+    with extra features for both users and items, enabling cold-start recommendations.
 - **Loss Function**: WARP (Weighted Approximate-Rank Pairwise)
 - **Components**: 32 latent dimensions
 - **Features**:
-  - User: Age bins, location, tenure bins, service counts
-  - Item: Categories, price bins, tier levels
-- **Evaluation Metrics**: Precision@k, Recall@k, F1-Score, AUC
+  - **User Features**:
+    - Region
+    - Outage risk
+    - Household size
+    - Devices and IoT count
+    - WFH, gamer, and creator counts
+    - Budget
+    - Broadband usage (GB/month)
+    - Mobile line count
+    - Mobile data usage
+    - Current mobile bill
+    - Service flags (has_mobile, is_new_customer)
+
+- **Item Features**:
+    - Product category (internet tier, mobile plan, add-on, bundle, offer)
+    - Pricing tier
+    - Speed level (for internet products)
+
+- **Evaluation Metrics**: 
+    - Precision@k and Recall@k (ranking accuracy)
+    - F1@k (harmonic balance of precision/recall)
+    - AUC (pairwise ranking performance)
 
 ---
 
@@ -136,9 +168,10 @@ Data generated using `dataGen.py` to simulate realistic customer behavior patter
 
 ```
 ├── Ailawadi-A2.ipynb          # Main analysis notebook
+├── Ailawadi-A2.html          # HTML for notebook analysis
 ├── streamlit_app.py           # Interactive web application
 ├── requirements.txt           # Python dependencies
-├── dataGen.py                 # Synthetic data generator
+├── dataGen_v3.py               # Synthetic data generator
 ├── users_v3.csv              # Customer profiles
 ├── items_v3.csv              # Product catalog
 ├── interactions_v3.csv       # Interaction history
